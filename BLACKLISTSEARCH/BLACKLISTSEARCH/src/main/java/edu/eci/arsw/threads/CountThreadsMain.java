@@ -21,6 +21,7 @@ public class CountThreadsMain {
     	hilo3.start();
     	*/
     	hilo1.run();
+    	hilo1.run();
     	hilo2.run();
     	hilo3.run();
     }
