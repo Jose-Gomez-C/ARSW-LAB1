@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import enums.GridSize;
 import java.awt.BorderLayout;
@@ -84,16 +85,32 @@ public class SnakeApp {
     	pause.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
+				int maxTamano = 0;
+				int idMaxtamano =0;
+				int idprimeraMuerte = -1;
+				boolean esPrimera= true;
 				for (int i =0; i < snakes.length ; i++) {
+					if(maxTamano < snakes[i].getTamano()) {
+						maxTamano= snakes[i].getTamano();
+						idMaxtamano= snakes[i].getIdt();
+					}
+					if (snakes[i].isSnakeEnd() && esPrimera) {
+						idprimeraMuerte = snakes[i].getIdt();
+						esPrimera=false;
+					} 
+					
 					snakes[i].setEstado(false);
 				}
+				String message = "la serpiente mas larga es: " + idMaxtamano + " La primera muerte fue: " + idprimeraMuerte;
+				
+				JOptionPane.showMessageDialog(null, message);
 			}
 		});
     	resumen.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
 				for (int i =0; i < snakes.length ; i++) {
-					snakes[i].aCorrer();;
+					snakes[i].aCorrer();
 				}	
 			}
 		});

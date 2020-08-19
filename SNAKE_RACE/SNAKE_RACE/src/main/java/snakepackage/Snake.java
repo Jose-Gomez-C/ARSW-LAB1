@@ -27,12 +27,14 @@ public class Snake extends Observable implements Runnable {
 	private int growing = 0;
 	public boolean goal = false;
 	private boolean estado;
+	private int tamano;
 
 	public Snake(int idt, Cell head, int direction) {
 		this.idt = idt;
 		this.direction = direction;
 		generateSnake(head);
 		estado= false;
+		tamano = 0;
 
 	}
 
@@ -192,6 +194,7 @@ public class Snake extends Observable implements Runnable {
 
 		if (Board.gameboard[newCell.getX()][newCell.getY()].isFood()) {
 			// eat food
+			tamano++;
 			growing += 3;
 			int x = random.nextInt(GridSize.GRID_HEIGHT);
 			int y = random.nextInt(GridSize.GRID_WIDTH);
@@ -367,6 +370,9 @@ public class Snake extends Observable implements Runnable {
 	}
 	public void setEstado(boolean status) {
 		estado = status;
+	}
+	public int getTamano() {
+		return tamano;
 	}
 
 }
