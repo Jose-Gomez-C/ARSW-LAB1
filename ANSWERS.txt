@@ -1,0 +1,11 @@
+ANSWERS
+
+1. Possible race conditions
+Las posibles condiciones de carrera que se pueden presentar en el metodo drawsnake ya que muchos hilos intentan acceder al cuerpo de la serpiente al tiempo.
+
+
+2 Uso de colecciones inapropiadas
+Cuando se produce el crecimiento de la serpiente ocurre un error al momento es que se modifica esta variable y esto ocurre en la coleccion snakeBody
+
+3 Uso innecesario de waits 
+Esto ocurre en el metodo run de la clase Snake cuando se realiza el llamado al metodo Thread.sleep, esto se soluciono sincronizando el objeto
