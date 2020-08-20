@@ -55,7 +55,7 @@ $ java -cp target\Snake-race-thread-1.0-SNAPSHOT.jar snakepackage.SnakeApp
 > La ley de Amdahl nos habla que  El incremento de velocidad de un programa utilizando múltiples procesadores en computación distribuida está limitada por la fracción secuencial del programa. En la blackList logramos incrementar la velocidad del programa mediante diferentes hilos. Logramos observar que a medida que incrementábamos la cantidad de hilos teníamos cada vez un incremento mas pequeño en la velocidad
 
 ## SNAKE_RACE
-Las respuestas las puede ver en el archivo ![ANSWERS](https://github.com/jose-gome/ARSW-LAB1//blob/master/ANSWERS.txt)
+Las respuestas las puede ver en el archivo ![ANSWERS](https://github.com/jose-gome/ARSW-LAB1/blob/master/ANSWERS.txt)
 
 
 ## Autores
@@ -63,5 +63,5 @@ Las respuestas las puede ver en el archivo ![ANSWERS](https://github.com/jose-go
 - **Jose Luis Gomez Camacho**
 
 ## Licencia
-Este proyecto posee la licencia MIT. Para mas detalles [Licencia]((https://github.com/jose-gome/ARSW-LAB1//blob/master/LICENSE.txt).
+Este proyecto posee la licencia MIT. Para mas detalles [Licencia](https://github.com/jose-gome/ARSW-LAB1/blob/master/LICENSE.txt) .
 
